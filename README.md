@@ -4,10 +4,10 @@ This API allows you to send an email to a specified recipient using a specified 
 
 ## Base URL
 
-[https://send-email.onrender.com/sendmail](https://send-email.onrender.com/sendmail)
+[https://send-email-api.onrender.com](https://send-email-api.onrender.com)
 
 ## Endpoint
-```POST /sendmail```
+`POST /sendmail`
 
 ## Request Parameters
 
@@ -15,10 +15,10 @@ This API allows you to send an email to a specified recipient using a specified 
 
 **SENDERS_EMAIL**: The email address to be used to send the email.\
 **SENDERS_NAME**: The name of the sender.\
-**APP_PASSWORD**: The password for the email address to be used to send the email.\
+**APP_PASSWORD*: The password for the email address to be used to send the email.\
 **RECEIVERS_EMAIL**: The email address of the recipient.\
 **SUBJECT**: The subject of the email.\
-**MESSAGE_BODY**: The body of the email.\
+**MESSAGE_BODY**: The body of the email.
 
 ## Example Request
 
@@ -56,7 +56,7 @@ A successful response will return a JSON object with the following properties:\
 
 If an error occurs while sending the email, the API will return a JSON object with the following properties\
 
-**status**: A boolean indicating whether the email was successfully sent.\
+**status***: A boolean indicating whether the email was successfully sent.\
 **message**: A string containing an error message.
 
 ```json
