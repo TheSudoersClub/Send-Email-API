@@ -4,7 +4,7 @@ This API allows you to send an email to a specified recipient using a specified 
 
 ## Base URL
 
-[https://send-email-api.onrender.com](https://send-email-api.onrender.com)
+[https://send-email-api.onrender.com/sendmail](https://send-email-api.onrender.com/sendmail)
 
 ## Endpoint
 `POST /sendmail`
@@ -15,7 +15,7 @@ This API allows you to send an email to a specified recipient using a specified 
 
 **SENDERS_EMAIL**: The email address to be used to send the email.\
 **SENDERS_NAME**: The name of the sender.\
-**APP_PASSWORD*: The password for the email address to be used to send the email.\
+**[APP_PASSWORD](https://support.google.com/accounts/answer/185833?hl=en)**: The password for the email address to be used to send the email.\
 **RECEIVERS_EMAIL**: The email address of the recipient.\
 **SUBJECT**: The subject of the email.\
 **MESSAGE_BODY**: The body of the email.
