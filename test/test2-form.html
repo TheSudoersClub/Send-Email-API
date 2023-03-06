@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <form id="email-form">
+        <label for="SENDERS_EMAIL">Your Email Address:</label>
+        <input type="email" id="SENDERS_EMAIL" name="SENDERS_EMAIL" required><br><br>
+        <label for="SENDERS_NAME">Your Name:</label>
+        <input type="text" id="SENDERS_NAME" name="SENDERS_NAME" required><br><br>
+        <label for="APP_PASSWORD">App Password:</label>
+        <input type="password" id="APP_PASSWORD" name="APP_PASSWORD" required><br><br>
+        <label for="RECEIVERS_EMAIL">Recipient Email Address:</label>
+        <input type="email" id="RECEIVERS_EMAIL" name="RECEIVERS_EMAIL" required><br><br>
+        <label for="SUBJECT">Subject:</label>
+        <input type="text" id="SUBJECT" name="SUBJECT" required><br><br>
+        <label for="MESSAGE_BODY">Message Body:</label><br>
+        <textarea id="MESSAGE_BODY" name="MESSAGE_BODY" rows="10" cols="30" required></textarea><br><br>
+        <input type="submit" value="Send">
+    </form>
+
+    <script>
+
+        // api testing with form data
+        const form = document.getElementById("email-form");
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault(); // prevent form from submitting
+
+            const formData = new FormData(event.target); // get form data
+
+            // Convert form data to JSON object
+            const jsonObject = {};
+            for (const [key, value] of formData.entries()) {
+                jsonObject[key] = value;
+            }
+
+            // Send data to server as JSON payload
+            const response = await fetch("http://localhost:3000/sendmail", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(jsonObject),
+            });
+
+            // get the data from the response
+            const data = await response.json();
+
+            // log the object {status, message}
+            console.log(data);
+
+        });
+
+    </script>
+</body>
+
+</html>
