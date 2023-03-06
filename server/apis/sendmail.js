@@ -15,8 +15,6 @@ router.post("/", express.json(), async (req, res) => {
         message
     } = await sendmail(emailData);
 
-    console.log(status, message);
-
     // send the response
     res.send({
         status: status,
