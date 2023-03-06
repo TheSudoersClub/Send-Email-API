@@ -1,1 +1,31 @@
-<!-- todo  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                SENDERS_EMAIL: "your-email-address",
+                SENDERS_NAME: "your-name",
+                APP_PASSWORD: "your-app-password",
+                RECEIVERS_EMAIL: "receivers-email-address",
+                SUBJECT: "email-subject",
+                MESSAGE_BODY: "Hello, this is am email from Send-Email-API"
+
+            })
+        };
+        fetch('http://localhost:3000/sendmail', requestOptions);
+
+    </script>
+</body>
+
+</html>
