@@ -1,0 +1,11 @@
+{
+  "name": "send-email-api",
+  "version": "1.0.0",
+  "description": "A simple api which helps us to send emails from the given email and app password to the receiver.",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TSC",
+  "license": "ISC"
+}
