@@ -4,7 +4,7 @@ This API allows you to send an email to a specified recipient using a specified 
 
 ## Base URL
 
-[https://send-email-api.onrender.com/sendmail](https://send-email-api.onrender.com/sendmail)
+[https://send-email-api.onrender.com](https://send-email-api.onrender.com)
 
 ## Endpoint
 `POST /sendmail`
